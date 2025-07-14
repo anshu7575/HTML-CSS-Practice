@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Registration Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f8fb;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #0077cc;
+    }
+
+    .tab-buttons {
+      margin: 20px 0;
+    }
+
+    .tab-buttons button {
+      padding: 10px 20px;
+      margin: 0 5px;
+      font-size: 16px;
+      border: none;
+      background-color: #ccc;
+      color: #000;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .tab-buttons button.active {
+      background-color: #0077cc;
+      color: white;
+    }
+
+    .form-container {
+      display: none;
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: left;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .form-container.active {
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005fa3;
+    }
+
+    .message-btn {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to My Web Page</h1>
+  <p>This is a simple webpage with login and registration forms.</p>
+
+  <div class="tab-buttons">
+    <button class="active" onclick="showForm('login')">Login</button>
+    <button onclick="showForm('register')">Register</button>
+  </div>
+
+  <!-- Login Form -->
+  <div id="login" class="form-container active">
+    <h2>Login</h2>
+    <form onsubmit="return handleLogin(event)">
+      <label>Email:</label>
+      <input type="email" required><br>
+      <label>Password:</label>
+      <input type="password" required><br>
+      <input type="submit" value="Login">
+    </form>
+  </div>
+
+  <!-- Register Form -->
+  <div id="register" class="form-container">
+    <h2>Register</h2>
+    <form onsubmit="return handleRegister(event)">
+      <label>Name:</label>
+      <input type="text" required><br>
+      <label>Email:</label>
+      <input type="email" required><br>
+      <label>Password:</label>
+      <input type="password" required><br>
+      <label>Confirm Password:</label>
+      <input type="password" required><br>
+      <input type="submit" value="Register">
+    </form>
+  </div>
+
+  <!-- Button from original -->
+  <div class="message-btn">
+    <button onclick="showMessage()">Click Me!</button>
+  </div>
+
+  <script>
+    function showMessage() {
+      alert("Hello! Thanks for clicking the button.");
+    }
+
+    function showForm(formId) {
+      // Toggle active class on forms
+      document.getElementById("login").classList.remove("active");
+      document.getElementById("register").classList.remove("active");
+      document.getElementById(formId).classList.add("active");
+
+      // Toggle active class on buttons
+      const buttons = document.querySelectorAll(".tab-buttons button");
+      buttons.forEach(btn => btn.classList.remove("active"));
+      if (formId === "login") buttons[0].classList.add("active");
+      else buttons[1].classList.add("active");
+    }
+
+    function handleLogin(event) {
+      event.preventDefault();
+      alert("Login submitted!");
+      return false;
+    }
+
+    function handleRegister(event) {
+      event.preventDefault();
+      alert("Registration submitted!");
+      return false;
+    }
+  </script>
+
+</body>
+</html>
