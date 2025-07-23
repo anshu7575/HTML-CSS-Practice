@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElectroHub</title>
+  <link href=https://unsplash.com/photos/electronic-components-laid-out-on-a-wooden-table-anT-7GmycsY rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #6c2bd9;
+      display: flex;
+      align-items: center;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .shop-btn {
+      background-color: #6c2bd9;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .hero {
+      background: url('https://unsplash.com/photos/electronic-components-laid-out-on-a-wooden-table-anT-7GmycsY') no-repeat center center/cover;
+      height: 60vh;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero button {
+      padding: 0.75rem 1.5rem;
+      background-color: #6c2bd9;
+      border: none;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section h2::after {
+      content: '';
+      width: 50px;
+      height: 3px;
+      background: #6c2bd9;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.05);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-card h4 {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      margin: 0.5rem 0;
+      color: #555;
+    }
+
+    .price {
+      color: #6c2bd9;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .buy-btn {
+      background: #fdbb2d;
+      color: #333;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">⚡ ElectroHub</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Products</a>
+      <a href="#">Categories</a>
+      <a href="#">About</a>
+      <a href="#">Testimonials</a>
+      <a href="#">Contact</a>
+      <button class="shop-btn">Shop Now</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Discover the Future of Tech</h1>
+      <p>Explore our curated selection of the latest and greatest electronic gadgets, from smartphones to smart home devices.</p>
+      <button>Explore Products</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Featured Products</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="C:\HTML & CSS Practice\My first web page\iphone.jpg" alt="Smartphone" />
+        <h4>Smartphone X</h4>
+        <p>AI camera and stunning display</p>
+        <div class="price">$999</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <img src="C:\HTML & CSS Practice\My first web page\Laptop.jpg" alt="Laptop" />
+        <h4>Laptop Pro</h4>
+        <p>Lightweight for professionals</p>
+        <div class="price">$1499</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <img src="C:\HTML & CSS Practice\My first web page\Smart Watch.jpg" alt="Smartwatch" />
+        <h4>Smartwatch S</h4>
+        <p>Fitness and smart features</p>
+        <div class="price">$299</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+      <div class="product-card">
+        <img src="C:\HTML & CSS Practice\My first web page\Headphone.jpg" alt="Headphones" />
+        <h4>Headphones Z</h4>
+        <p>Noise-cancelling sound</p>
+        <div class="price">$199</div>
+        <button class="buy-btn">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
