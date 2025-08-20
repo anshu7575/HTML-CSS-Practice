@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Report Card Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: white;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 3px solid #1c3c87;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 26px;
+      color: #1c3c87;
+      font-weight: bold;
+    }
+    .header p {
+      margin: 3px 0;
+      font-size: 14px;
+      color: #444;
+    }
+    .header .sub {
+      font-size: 15px;
+      font-weight: bold;
+      margin-top: 6px;
+    }
+    h2 {
+      text-align: center;
+      color: #1c3c87;
+      margin-bottom: 15px;
+    }
+    form {
+      width: 75%;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .row {
+      display: flex;
+      gap: 20px;
+    }
+    .row .form-group {
+      flex: 1;
+    }
+    .mission {
+      background: #eef4ff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #1c3c87;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0f255d;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    <h1>ROYAL INTERNATIONAL SCHOOL</h1>
+    <p>Affiliated to CBSE BOARD | Affiliation No: 1130824</p>
+    <p>Managed by : Dombivali Yuvak Education Trust</p>
+    <div class="subtext" style="margin-top:10px; font-size:13px;">
+      P & T Colony, Gandhi Nagar, Dombivali (E), Ph. 8291900505 / 08<br>
+      Email : royal.international349@gmail.com, Website : www.royalinternationalschool.co.in
+    </div>
+    <p class="sub">REPORT CARD – CLASS III to VIII</p>
+    <p class="sub">ACADEMIC YEAR: 2025-2026</p>
+  </div>
+
+  <h2>Student's Profile</h2>
+
+  <!-- Student Profile Form -->
+  <form>
+    <div class="form-group">
+      <label for="studentName">Name of Student</label>
+      <input type="text" id="studentName" name="studentName" placeholder="Enter student's full name">
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob">
+      </div>
+      <div class="form-group">
+        <label for="ecNo">EC No.</label>
+        <input type="text" id="ecNo" name="ecNo" placeholder="e.g., 00001108">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <label for="class">Class</label>
+        <select id="class" name="class">
+          <option>Grade-III</option>
+          <option>Grade-IV</option>
+          <option>Grade-V</option>
+          <option>Grade-VI</option>
+          <option>Grade-VII</option>
+          <option>Grade-VIII</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="division">Division</label>
+        <input type="text" id="division" name="division" placeholder="A/B/C">
+      </div>
+      <div class="form-group">
+        <label for="rollNo">Roll No.</label>
+        <input type="text" id="rollNo" name="rollNo" placeholder="e.g., 00001108">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="fatherName">Father's Name</label>
+      <input type="text" id="fatherName" name="fatherName">
+    </div>
+
+    <div class="form-group">
+      <label for="motherName">Mother's Name</label>
+      <input type="text" id="motherName" name="motherName">
+    </div>
+
+    <div class="form-group">
+      <label for="address">Residential Address</label>
+      <textarea id="address" name="address" rows="3"></textarea>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <label for="contact1">Contact 1 (Resi.)</label>
+        <input type="text" id="contact1" name="contact1" placeholder="e.g., 9324585716">
+      </div>
+      <div class="form-group">
+        <label for="contact2">Contact 2 (Off.)</label>
+        <input type="text" id="contact2" name="contact2" placeholder="e.g., 9348229489">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <label for="attendance">Total Attendance</label>
+        <input type="number" id="attendance" name="attendance">
+      </div>
+      <div class="form-group">
+        <label for="workingDays">Total Working Days</label>
+        <input type="number" id="workingDays" name="workingDays">
+      </div>
+    </div>
+
+    <div class="mission">
+      <strong>Mission Statement:</strong>
+      <p>Our noble mission is to help young minds grow and learn in a homely harmonious environment,
+      where ample opportunities are provided for the child, to discover truth and facts of life which
+      result in all-round development of the child.</p>
+    </div>
+
+    <button type="submit">Submit Report Card</button>
+  </form>
+
+</body>
+</html>
