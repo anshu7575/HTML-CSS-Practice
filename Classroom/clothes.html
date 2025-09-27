@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clothes - Amazon </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <div class="nav-logo border">
+        <a href="index.html"><div class="logo"></div></a>
+      </div>
+      <div class="nav-search">
+        <input type="text" placeholder="Search Clothes..." class="search-input">
+        <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+      </div>
+      <div class="nav-cart border">
+        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+      </div>
+    </div>
+  </header>
+
+  <h2 style="margin:20px;">Clothes Collection</h2>
+
+  <div class="shop-section">
+    <div class="box">
+      <div class="box-content">
+        <h2>Men's T-Shirts</h2>
+        <div class="box-img" style="background-image: url('images/clothes1.jpg');"></div>
+        <button onclick="addToCart('Men T-Shirt')">Add to Cart</button>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+        <h2>Women's Dress</h2>
+        <div class="box-img" style="background-image: url('images/clothes2.jpg');"></div>
+        <button onclick="addToCart('Women Dress')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="foot-panel1">Back to Top</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

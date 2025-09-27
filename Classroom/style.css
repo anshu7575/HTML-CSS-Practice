@@ -236,7 +236,7 @@ ul a {
 
 .font-panel3 {
     background-color: #222f3d;
-    color: white;
+    color: #000;
     border-top: 0.5px solid white;
     height: 70px;
     display: flex;
@@ -246,7 +246,7 @@ ul a {
 
 .logo {
     background-image: url("amazon_logo.png");
-    background-size: cover;
+    /* background-size: cover; */
     height:50px;
     width: 100px;
 }

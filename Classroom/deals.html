@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Today's Deals</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f4; }
+    .navbar { background: #131921; color: white; padding: 15px; display: flex; gap: 20px; }
+    .navbar a { color: white; text-decoration: none; }
+    .container { display: flex; margin: 20px; }
+    .sidebar { width: 220px; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    .sidebar h3 { margin-top: 0; font-size: 16px; }
+    .tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+    .tab { background: white; padding: 8px 12px; border-radius: 20px; border: 1px solid #ddd; font-size: 14px; cursor: pointer; }
+    .products { flex: 1; margin-left: 20px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap: 20px; }
+    .card { background: white; border-radius: 8px; padding: 10px; box-shadow: 0 0 5px rgba(0,0,0,0.1); text-align: center; }
+    .card img { width: 100%; height: 180px; object-fit: contain; margin-bottom: 10px; }
+    .badge { background: #cc0c39; color: white; padding: 2px 6px; font-size: 12px; border-radius: 4px; display: inline-block; margin-bottom: 5px; }
+    .price { font-weight: bold; margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="deals.html">Today's Deals</a>
+    <a href="customer.html">Customer Service</a>
+    <a href="registry.html">Registry</a>
+    <a href="giftcards.html">Gift Cards</a>
+    <a href="sell.html">Sell</a>
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Department</h3>
+      <p><input type="checkbox"> Amazon Devices & Accessories</p>
+      <p><input type="checkbox"> Appliances</p>
+      <p><input type="checkbox"> Arts, Crafts & Sewing</p>
+      <p><input type="checkbox"> Automotive</p>
+
+      <h3>Brands</h3>
+      <p><input type="checkbox"> Garmin</p>
+      <p><input type="checkbox"> Bissell</p>
+      <p><input type="checkbox"> Shark</p>
+      <p><input type="checkbox"> Oral-B</p>
+
+      <h3>Customer Reviews</h3>
+      <p>⭐⭐⭐⭐ & Up</p>
+
+      <h3>Price</h3>
+      <p>$0 - $2500</p>
+    </div>
+
+    <div class="products">
+      <div class="tabs">
+        <div class="tab">Trending</div>
+        <div class="tab">Lightning deals</div>
+        <div class="tab">Customer's Most-Loved</div>
+        <div class="tab">Fall Favorites</div>
+        <div class="tab">Halloween</div>
+        <div class="tab">Outlet</div>
+        <div class="tab">Beauty</div>
+        <div class="tab">Fashion</div>
+        <div class="tab">Home</div>
+        <div class="tab">Toys & Games</div>
+        <div class="tab">Electronics</div>
+        <div class="tab">Devices</div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="badge">38% off - Limited time deal</div>
+          <img src="images/box1_image.jpg" alt="Product">
+          <p>Garmin inReach Mini 2, Lightweight and Compact...</p>
+          <p class="price">$249.99</p>
+        </div>
+        <div class="card">
+          <div class="badge">11% off - Limited time deal</div>
+          <img src="images/box2_image.jpg" alt="Product">
+          <p>BISSELL Little Green Mini Carpet Cleaner...</p>
+          <p class="price">$123.45</p>
+        </div>
+        <div class="card">
+          <div class="badge">35% off - With Prime</div>
+          <img src="images/box3_image.jpg" alt="Product">
+          <p>Crest 3D Whitestrips Professional Effects...</p>
+          <p class="price">$39.95</p>
+        </div>
+        <div class="card">
+          <div class="badge">58% off - With Prime</div>
+          <img src="images/box4_image.jpg" alt="Product">
+          <p>Shark AV2501S AI Ultra Robot Vacuum...</p>
+          <p class="price">$449.99</p>
+        </div>
+        <div class="card">
+          <div class="badge">40% off - With Prime</div>
+          <img src="images/box5_image.jpg" alt="Product">
+          <p>Oral-B iO Deep Clean Rechargeable...</p>
+          <p class="price">$179.99</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
